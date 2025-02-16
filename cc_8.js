@@ -99,13 +99,24 @@ function createCartTracker() // creating a function that keeps track of items wi
   };
 }
 let cart = createCartTracker();
+console.log("Cart Tracker");
 console.log(`Total Cart Value 1: $${cart(20)}`); // logging  test data 1
 console.log(`Total Cart Value 2: $${cart(35)}`); // logging test data 2
 
+//  Task 8: Recursion in JavaScript
+function calculateSavings(years, amount) 
+// creatoes a function that projects savings growth, with each year icreasing by 5% until it reaches year 10
+{
+if (years === 10) // calculates until years reach 10
+{ return amount.toFixed(2); // includes two decimal places in output
+}
+amount *= 1.05 // calculates the 5% increase in growth 
+return calculateSavings(years + 1, amount);
+} // returns the function
 
-
-
-
+console.log("Savings Growth Projection:") // adding a title to the console
+console.log(`Projected Savings: $${calculateSavings(8, 1000)}`);  // logging test data 1
+console.log(`Projected Savings: $${calculateSavings(5, 5000)}`);  // logging test data 2
 
 
 
