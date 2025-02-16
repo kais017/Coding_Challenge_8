@@ -78,6 +78,16 @@ console.log("Loan Payment Calculation:") // adding a title to console
 console.log(`Total Payment: $${calculateLoanPayment(1000, 0.05, 2)}`); // logging test data 1
 console.log(`Total Payment: $${calculateLoanPayment(5000, 0.07, 3)}`); // logging test data 2
 
+// Task 6: Higher-Order Functions
+let transactions = [200, 1500, 3200, 800, 2500];
+// declaring an array with five values
+
+function filterLargeTransactions(transactions) {
+return transactions.filter(transactions => transactions > 1000);
+} //creating a function that will return any transaction over 1000
+
+console.log("Transactions:", filterLargeTransactions(transactions));
+// logging the function, giving us the filtered output
 
 
 
