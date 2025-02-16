@@ -63,6 +63,20 @@ console.log("Car Rental Cost Calculation:") // adding a title to the console log
 console.log(`Total Rental Cost 1: $${calculateRentalCost(3, "Economy", true)}`); // logging test data 1
 console.log(`Total Rental Cost 2: $${calculateRentalCost(5, "Luxury", false)}`); // logging test data 2
 
+// Task 5: Returning Values
+
+function calculateLoanPayment(principal, rate, time) {
+// creating a function that calculates a loan payment based on the principal, rate, and time
+    let totalPayment = (principal + (principal * rate * time));
+// creating the formula to calculate the total loan payment
+ {
+    return(totalPayment.toFixed(2))
+ } // gives us our calculation in the output with two decimal places
+}
+
+console.log("Loan Payment Calculation:") // adding a title to console
+console.log(`Total Payment: $${calculateLoanPayment(1000, 0.05, 2)}`); // logging test data 1
+console.log(`Total Payment: $${calculateLoanPayment(5000, 0.07, 3)}`); // logging test data 2
 
 
 
