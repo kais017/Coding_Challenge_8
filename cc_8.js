@@ -43,6 +43,27 @@ console.log("Service Fee Calculation") // adding a title to the console log
 console.log(`Service Fee 1: $${calculateServiceFee(200, "Premium")}`); // logging the Premium Service test data
 console.log(`Service Fee 1: $${calculateServiceFee(500, "Standard")}`); //loggin the Standard Service test data
 
+// Task 4: Parameters and Arguments
+function calculateRentalCost(days, carType, insurance = false) {
+// create a function that calculates rental costs based on days, car type, and insurance
+let rentalCost = 0;
+
+if (carType === "Economy") {rentalCost = (40 * days);} // if the car type is Economy, the rental cost will be $40 per day
+else if (carType === "Standard") {rentalCost = (60 * days);} // if the car type is Standard, the rental cost will be $60 per day
+else if (carType === "Luxury") {rentalCost = (100 * days);} // if the car type is Luxury, the rental cost will be $100 per day
+
+if (insurance === true) { rentalCost += 20 ;} // if there is insurance, there will be an additional $20 fee
+
+{ 
+    return `${rentalCost.toFixed(2)}`;  // returns the calculated rental cost and uses .toFixed to include two decimal places in the output
+}
+}
+
+console.log("Car Rental Cost Calculation:") // adding a title to the console log
+console.log(`Total Rental Cost 1: $${calculateRentalCost(3, "Economy", true)}`); // logging test data 1
+console.log(`Total Rental Cost 2: $${calculateRentalCost(5, "Luxury", false)}`); // logging test data 2
+
+
 
 
 
