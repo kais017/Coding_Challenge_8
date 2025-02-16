@@ -75,8 +75,8 @@ function calculateLoanPayment(principal, rate, time) {
 }
 
 console.log("Loan Payment Calculation:") // adding a title to console
-console.log(`Total Payment: $${calculateLoanPayment(1000, 0.05, 2)}`); // logging test data 1
-console.log(`Total Payment: $${calculateLoanPayment(5000, 0.07, 3)}`); // logging test data 2
+console.log(`Total Payment 1: $${calculateLoanPayment(1000, 0.05, 2)}`); // logging test data 1
+console.log(`Total Payment 2: $${calculateLoanPayment(5000, 0.07, 3)}`); // logging test data 2
 
 // Task 6: Higher-Order Functions
 let transactions = [200, 1500, 3200, 800, 2500];
@@ -88,6 +88,20 @@ return transactions.filter(transactions => transactions > 1000);
 
 console.log("Transactions:", filterLargeTransactions(transactions));
 // logging the function, giving us the filtered output
+
+// Task 7: Closures
+function createCartTracker() // creating a function that keeps track of items within a cart and maintain a running total
+{
+ let cart = 0;
+  return function(item) { 
+ cart += item // adds the items and keeps a running total
+ return cart; // returns the total
+  };
+}
+let cart = createCartTracker();
+console.log(`Total Cart Value 1: $${cart(20)}`); // logging  test data 1
+console.log(`Total Cart Value 2: $${cart(35)}`); // logging test data 2
+
 
 
 
